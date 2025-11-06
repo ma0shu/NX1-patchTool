@@ -74,7 +74,7 @@ for path in "${!REPOS[@]}"; do
     # 确保目标父目录存在
     mkdir -p "$(dirname "${dest_path}")"
     # 使用 rsync 进行同步，它比 cp 更快、更智能，并且会删除多余的文件
-    rsync -a --delete "${source_path}/" "${dest_path}/"
+    rsync -a "${source_path}/" "${dest_path}/"
 done
 
 echo ""
