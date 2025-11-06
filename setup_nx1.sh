@@ -6,7 +6,7 @@ set -e
 # 定义您的个人仓库。格式：["目标路径"]="仓库地址 Branch/Revision"
 declare -A REPOS=(
     ["vendor/hardware_overlay"]="https://github.com/ma0shu/Bluefox-NX1-Overlay.git main"
-    ["patches/personal"]="https://github.com/ma0shu/NX1-patches.git main"
+    ["patches"]="https://github.com/ma0shu/NX1-patches.git main"
     ["vendor/mediatek/ims"]="https://github.com/XagaForge/android_vendor_mediatek_ims.git 16"
 )
 # --- 配置区结束 ---
