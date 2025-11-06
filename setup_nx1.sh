@@ -11,9 +11,15 @@ declare -A REPOS=(
 )
 # --- 配置区结束 ---
 
+if [ -z "$1" ]; then
+  echo "错误: 请提供 ROM 源码的根目录作为参数。"
+  echo "用法: bash $0 /path/to/your/rom/source"
+  echo "例如: bash $0 ."
+  exit 1
+fi
 
 # 脚本的根目录，也就是 nx1_tools 目录
-TOOLS_DIR=$(dirname "$(realpath "$0")")
+TOOLS_DIR=$(dirname "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)")
 # 用于存放克隆代码的临时目录
 CLONES_DIR="${TOOLS_DIR}/clones"
 # ROM源码的根目录，从第一个参数获取
